@@ -2,11 +2,40 @@
     {
     "id": 1,
     "title": "Sky Diving",
-    "author": "Jim Bob"
+    "author": "Jim Bob",
+    "steps": [
+        { 
+            "tasks": "task 1", 
+            "hazards": "hazard 1", 
+            "controls": "control 1"
+        },
+        { 
+            "tasks": "task 2", 
+            "hazards": "hazard 2", 
+            "controls": "control 2"
+        }
+    ]
     },
     {
     "id": 2,
     "title": "Fishing",
-    "author": "Les Claypool"
+    "author": "Les Claypool",
+    "steps": [
+        { 
+            "tasks": "task 1", 
+            "hazards": "hazard 1", 
+            "controls": "control 1"
+        },
+        { 
+            "tasks": "task 2", 
+            "hazards": "hazard 2", 
+            "controls": "control 2"
+        },
+        { 
+            "tasks": "task 3", 
+            "hazards": "hazard 3", 
+            "controls": "control 3"
+        }
+    ]
     }
 ]
