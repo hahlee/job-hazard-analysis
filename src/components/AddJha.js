@@ -100,10 +100,10 @@ function AddJha({ jhas, setJhas }) {
                         handleDeleteStep={handleDeleteStep}
                     />
                 ))}
-                <form-group>
+                <div className="form-bottom">
                     <button type="button" onClick={handleAddStep}>Add Step</button>
                     <button className="primary" type="submit">Submit JHA</button>
-                </form-group>
+                </div>
             </form>
         </>
     );
