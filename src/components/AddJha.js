@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
 import AddStep from './AddStep';
 
-
-
 function AddJha({ jhas, setJhas }) {
-
 
     const [formData, setFormData] = useState({
         title: '',

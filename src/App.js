@@ -15,27 +15,23 @@ function App() {
     );
   };
 
-  const handleEditClick = (id) => {
-      setEditJhaId(id);
-  };
+  const handleEditSubmit = (jhaId, updatedJha) => {
+    // Find the index of the item being edited
+    const jhaIndex = jhas.findIndex((jha) => jha.id === jhaId);
 
-  const handleCancelEdit = () => {
-    setEditJhaId(null);
-  };
+    // Update the item with the new values
+    const newJhas = [...jhas];
+    newJhas[jhaIndex] = updatedJha;
+    setJhas(newJhas);
 
-  const handleEditJha = (id, title, author) => {
-    setJhas((jhas) => 
-      jhas.map((jha) => 
-        jha.id === id ? { ...jha, title, author } : jha
-      )
-    );
+    // Clear the edit state
     setEditJhaId(null);
   };
 
   return(
     <div className="app-container">
       <AddJha jhas={jhas} setJhas={setJhas}/>
-      <JhaList jhas={jhas} onDelete={handleDeleteJha} editJhaId={editJhaId} handleEditJha={handleEditJha} setEditJhaId={setEditJhaId} handleCancelEdit={handleCancelEdit} handleEditClick={handleEditClick}/>
+      <JhaList jhas={jhas} onDelete={handleDeleteJha} handleEditSubmit={handleEditSubmit} editJhaId={editJhaId} setEditJhaId={setEditJhaId}/>
     </div>
   )
 }

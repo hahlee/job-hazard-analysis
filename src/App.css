@@ -17,6 +17,7 @@ body {
   padding: 1rem;
 }
 
+/* buttons */
 button {
   padding: .5em;
   margin: 0 .5em;
@@ -40,7 +41,7 @@ button.delete {
   border: 1px solid red;
 }
 
-
+/* Add JHA form */
 .form-top, .add-step-form {
   display: flex;
   align-items: center;
@@ -52,6 +53,7 @@ button.delete {
   margin: 0 1em;
 }
 
+/* JHA list */
 .jha-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -78,4 +80,22 @@ button.delete {
 
 .step {
   text-align: center;
+}
+
+/* Edit form */
+.jha .title label {
+  padding: .5em;
+}
+
+form.jha {
+  grid-template-columns: 30% 70%;
+}
+
+form.jha .title {
+  display: grid;
+}
+
+form.jha input {
+  width: 95%;
+  padding: .5em;
 }

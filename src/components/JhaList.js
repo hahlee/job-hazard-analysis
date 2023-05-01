@@ -1,44 +1,52 @@
 import React from 'react'
-import Jha from './Jha'
+// import Jha from './Jha'
+import JhaEditForm from './JhaEditForm'
 
-const JhaList = ({ jhas, onDelete, editJhaId, handleEditJha, setEditJhaId, handleCancelEdit, handleEditClick }) => {
+const JhaList = ({ jhas, onDelete, editJhaId, setEditJhaId, handleEditSubmit }) => {
 
     return (
         <div className="jha-list">
             {jhas.map((jha, index) => {
                 return (
                     (editJhaId === jha.id ? (
-                        <form 
+                        // Show edit form for current item
+                        <JhaEditForm
+                            jha={jha}
                             key={index}
-                            className="add-jha-form" 
-                            onSubmit={(e) => {
-                                e.preventDefault();
-                                handleEditJha(jha.id, e.target.title.value, e.target.author.value)
-                            }}
-                        >
-                            <div className="form-top">
-                                <label>
-                                    Title:
-                                    <input
-                                        type="text"
-                                        name="title"
-                                        defaultValue={jha.title}
-                                    />
-                                </label>
-                                <label>
-                                    Author:
-                                    <input
-                                        type="text"
-                                        name="author"
-                                        defaultValue={jha.author}
-                                    />
-                                </label>
-                            </div>
-                            <button className="delete" type="button" onClick={handleCancelEdit}>Cancel</button>
-                            <button className="primary" type="submit">Save</button>
-                        </form>
+                            onSubmit={(updatedJha) =>
+                                handleEditSubmit(jha.id, updatedJha)
+                            }
+                            onCancel={() => setEditJhaId(null)}
+                        />
                     ) : (
-                        <Jha jha={jha} key={index} onDelete={onDelete} setEditJhaId={setEditJhaId} handleEditClick={handleEditClick}/>
+                        <div className="jha" key={index}>
+                            <div className="title">
+                                <p>Title: {jha.title}</p>
+                                <p>Author: {jha.author}</p>
+                                <button onClick={() => setEditJhaId(jha.id)}>Edit JHA</button>
+                                <button className="delete" onClick={() => onDelete(jha.id)}>Delete JHA</button>
+                            </div>
+                            <table className="steps">
+                                <thead>
+                                    <tr>
+                                        <th>Tasks</th>
+                                        <th>Hazards</th>
+                                        <th>Controls</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {jha.steps.map((step, i) => {
+                                        return (
+                                            <tr className="step" key={i}>
+                                                <td>{step.tasks}</td>
+                                                <td>{step.hazards}</td>
+                                                <td>{step.controls}</td>
+                                            </tr>
+                                        );
+                                    })}
+                                </tbody>
+                            </table>
+                        </div>
                     ))
                 )
             })}
