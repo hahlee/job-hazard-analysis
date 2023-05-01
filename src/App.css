@@ -17,6 +17,7 @@ body {
   padding: 1rem;
 }
 
+/* buttons */
 button {
   padding: .5em;
   margin: 0 .5em;
@@ -34,18 +35,25 @@ button.primary {
   border: 1px solid green;
 }
 
+button.delete {
+  background: red;
+  color: white;
+  border: 1px solid red;
+}
 
-.form-top, .step-form {
+/* Add JHA form */
+.form-top, .add-step-form {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   margin: 1em 0;
 }
 
-.form-top input, .step-form textarea {
+.form-top input, .add-step-form textarea {
   margin: 0 1em;
 }
 
+/* JHA list */
 .jha-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -72,4 +80,22 @@ button.primary {
 
 .step {
   text-align: center;
+}
+
+/* Edit form */
+.jha .title label {
+  padding: .5em;
+}
+
+form.jha {
+  grid-template-columns: 30% 70%;
+}
+
+form.jha .title {
+  display: grid;
+}
+
+form.jha input {
+  width: 95%;
+  padding: .5em;
 }
