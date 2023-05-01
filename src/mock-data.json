@@ -1,41 +1,58 @@
 [
     {
-    "id": 1,
-    "title": "Sky Diving",
-    "author": "Jim Bob",
-    "steps": [
-        { 
-            "tasks": "task 1", 
-            "hazards": "hazard 1", 
-            "controls": "control 1"
-        },
-        { 
-            "tasks": "task 2", 
-            "hazards": "hazard 2", 
-            "controls": "control 2"
-        }
-    ]
+        "id": 1,
+        "title": "Sky Diving",
+        "author": "Cannibal Corpse",
+        "steps": [
+            { 
+                "tasks": "Hammer Smashed Face", 
+                "hazards": "Tomb of the Mutilated", 
+                "controls": "1992"
+            },
+            { 
+                "tasks": "Scourge of Iron", 
+                "hazards": "Torture", 
+                "controls": "2012"
+            }
+        ]
     },
     {
-    "id": 2,
-    "title": "Fishing",
-    "author": "Les Claypool",
-    "steps": [
-        { 
-            "tasks": "task 1", 
-            "hazards": "hazard 1", 
-            "controls": "control 1"
-        },
-        { 
-            "tasks": "task 2", 
-            "hazards": "hazard 2", 
-            "controls": "control 2"
-        },
-        { 
-            "tasks": "task 3", 
-            "hazards": "hazard 3", 
-            "controls": "control 3"
-        }
-    ]
+        "id": 2,
+        "title": "Fishing",
+        "author": "Les Claypool",
+        "steps": [
+            { 
+                "tasks": "Frizzle Fry", 
+                "hazards": "Frizzle Fry", 
+                "controls": "1990"
+            },
+            { 
+                "tasks": "Jerry Was A Race Car Driver", 
+                "hazards": "Sailing the Season of Cheese", 
+                "controls": "1991"
+            },
+            { 
+                "tasks": "My Name is Mud", 
+                "hazards": "Pork Soda", 
+                "controls": "1993"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Driving",
+        "author": "Roger Miller",
+        "steps": [
+            { 
+                "tasks": "Dang Me", 
+                "hazards": "Roger and Out", 
+                "controls": "1964"
+            },
+            { 
+                "tasks": "King of the Road", 
+                "hazards": "King of the Road", 
+                "controls": "1965"
+            }
+        ]
     }
 ]
