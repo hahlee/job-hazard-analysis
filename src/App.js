@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import AddJha from './components/AddJha';
+import Footer from './components/Footer';
+import Header from './components/Header';
 import JhaList from './components/JhaList';
 import data from './mock-data.json';
 
@@ -30,8 +32,10 @@ function App() {
 
   return(
     <div className="app-container">
+      <Header />
       <AddJha jhas={jhas} setJhas={setJhas}/>
       <JhaList jhas={jhas} onDelete={handleDeleteJha} handleEditSubmit={handleEditSubmit} editJhaId={editJhaId} setEditJhaId={setEditJhaId}/>
+      <Footer />
     </div>
   )
 }

@@ -17,16 +17,29 @@ body {
   padding: 1rem;
 }
 
+.header {
+  text-align: center;
+  color: steelblue;
+  padding: 1em;
+}
+
 /* buttons */
 button {
   padding: .5em;
   margin: 0 .5em;
   text-transform: uppercase;
+  font-size: 15px;
   font-weight: bold;
   border-radius: 5px;
   background:white;
-  color:blue;
-  border: 1px solid blue;
+  color:steelblue;
+  border: 1px solid steelblue;
+}
+
+button:hover {
+  background:steelblue;
+  color:white;
+  border: 1px solid steelblue;
 }
 
 button.primary {
@@ -35,32 +48,61 @@ button.primary {
   border: 1px solid green;
 }
 
+button.primary:hover {
+  background: darkgreen;
+  border: 1px solid darkgreen;
+}
+
 button.delete {
   background: red;
   color: white;
   border: 1px solid red;
 }
 
+button.delete:hover {
+  background: darkred;
+  border: 1px solid darkred;
+}
+
 /* Add JHA form */
+.add-jha-form {
+  background: steelblue;
+  border-radius: 10px;
+  padding: 2em;
+}
+
+.add-jha-form input, .add-jha-form textarea {
+  border-radius: 5px;
+  min-height: 30px;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
 .form-top, .add-step-form, .form-bottom {
   display: flex;
-  align-items: center;
+  align-items: end;
   flex-wrap: wrap;
-  margin: 1em 0;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: end;
+  font-size: 20px;
+  color: white;
 }
 
-.form-top input {
-  margin: .5em;
+.form-bottom {
+  flex-direction: row;
+  margin: 0.5em 0;
 }
 
-.add-step-form textarea {
-  margin: 0 .5em;
+.add-step-form > div {
+  display: flex;
+  align-items: center
 }
 
-@media screen and (min-width:740px) {
-  .form-top input {
-    margin: 0 1em;
+@media screen and (min-width:768px) {
+  .form-top, .add-step-form, .form-bottom {
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
@@ -88,13 +130,13 @@ button.delete {
 
 @media screen and (min-width:740px) {
   .jha {
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 35% 65%;
   }
 }
 
 @media screen and (min-width:1070px) {
   .jha {
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 25% 75%;
   }
 }
 

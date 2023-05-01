@@ -70,8 +70,10 @@ function AddJha({ jhas, setJhas }) {
         <>
             <form className="add-jha-form" onSubmit={handleSubmit}>
                 <div className="form-top">
-                    <label>
-                        Title:
+                    <div>
+                        <label>
+                            Title:
+                        </label>
                         <input
                             type="text"
                             name="title"
@@ -79,9 +81,11 @@ function AddJha({ jhas, setJhas }) {
                             value={formData.title}
                             onChange={handleInputChange}
                         />
-                    </label>
-                    <label>
-                        Author:
+                    </div>
+                    <div>
+                        <label>
+                            Author:
+                        </label>
                         <input
                             type="text"
                             name="author"
@@ -89,7 +93,7 @@ function AddJha({ jhas, setJhas }) {
                             value={formData.author}
                             onChange={handleInputChange}
                         />
-                    </label>
+                    </div>
                 </div>
                 {formData.steps.map((step, index) => (
                     <AddStep
