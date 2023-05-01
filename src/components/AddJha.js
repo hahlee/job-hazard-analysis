@@ -64,6 +64,12 @@ function AddJha({ jhas, setJhas }) {
     
         const newJhas = [...jhas, newJha];
         setJhas(newJhas);
+
+        setFormData({
+            title: '',
+            author: '',
+            steps: [{ tasks: '', hazards: '', controls: '' }]
+        });
     };
 
     return (

@@ -10,6 +10,7 @@ function AddStep({ step, index, handleStepInputChange, handleDeleteStep }) {
                 <textarea
                     type="text"
                     name="tasks"
+                    required
                     value={step.tasks}
                     onChange={(event) => handleStepInputChange(event, index)}
                 />
@@ -21,6 +22,7 @@ function AddStep({ step, index, handleStepInputChange, handleDeleteStep }) {
                 <textarea
                     type="text"
                     name="hazards"
+                    required
                     value={step.hazards}
                     onChange={(event) => handleStepInputChange(event, index)}
                 />
@@ -32,6 +34,7 @@ function AddStep({ step, index, handleStepInputChange, handleDeleteStep }) {
                 <textarea
                     type="text"
                     name="controls"
+                    required
                     value={step.controls}
                     onChange={(event) => handleStepInputChange(event, index)}
                 />

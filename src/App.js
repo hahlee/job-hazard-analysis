@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css';
+import About from './components/About';
 import AddJha from './components/AddJha';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -30,13 +32,36 @@ function App() {
     setEditJhaId(null);
   };
 
-  return(
-    <div className="app-container">
-      <Header />
-      <AddJha jhas={jhas} setJhas={setJhas}/>
-      <JhaList jhas={jhas} onDelete={handleDeleteJha} handleEditSubmit={handleEditSubmit} editJhaId={editJhaId} setEditJhaId={setEditJhaId}/>
-      <Footer />
-    </div>
+  return (
+    <Router>
+        <div className="container">
+          <Header />
+          <Routes>
+            <Route
+              path='/'
+              element={
+                <>
+                  <AddJha jhas={jhas} setJhas={setJhas}/>
+                  {jhas.length > 0 ? (
+                    <JhaList
+                      jhas={jhas}
+                      onDelete={handleDeleteJha}
+                      handleEditSubmit={handleEditSubmit}
+                      editJhaId={editJhaId}
+                      setEditJhaId={setEditJhaId}
+                    />
+                  ) : (
+                    'No JHAs to Show'
+                  )}
+                </>
+              }
+            />
+            <Route path='/about' element={<About />} />
+          </Routes>
+          <Footer/>
+        </div>
+    </Router>
+    
   )
 }
 

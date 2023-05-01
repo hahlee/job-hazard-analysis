@@ -20,11 +20,11 @@ const JhaEditForm = ({ jha, onSubmit, onCancel} ) => {
             <div className="title">
                 <label>
                     Title:
-                    <input value={title} onChange={(e) => setTitle(e.target.value)} />
+                    <input required value={title} onChange={(e) => setTitle(e.target.value)} />
                 </label>
                 <label>
                     Author:
-                    <input value={author} onChange={(e) => setAuthor(e.target.value)} />
+                    <input required value={author} onChange={(e) => setAuthor(e.target.value)} />
                 </label>
             </div>
             <table className="steps">
@@ -40,18 +40,21 @@ const JhaEditForm = ({ jha, onSubmit, onCancel} ) => {
                         <tr key={step.id}>
                             <td>
                                 <input
+                                    required
                                     value={step.tasks}
                                     onChange={(e) => handleFieldChange(index, 'tasks', e.target.value)}
                                 />
                             </td>
                             <td>
                                 <input
+                                    required
                                     value={step.hazards}
                                     onChange={(e) => handleFieldChange(index, 'hazards', e.target.value)}
                                 />
                             </td>
                             <td>
                                 <input
+                                    required
                                     value={step.controls}
                                     onChange={(e) => handleFieldChange(index, 'controls', e.target.value)}
                                 />
