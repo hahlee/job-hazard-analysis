@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
-import StepForm from './StepForm';
+import AddStep from './AddStep';
 
 
 
-function JhaForm({ jhas, setJhas }) {
+function AddJha({ jhas, setJhas }) {
 
 
     const [formData, setFormData] = useState({
@@ -71,7 +71,7 @@ function JhaForm({ jhas, setJhas }) {
 
     return (
         <>
-            <form className="jha-form" onSubmit={handleSubmit}>
+            <form className="add-jha-form" onSubmit={handleSubmit}>
                 <div className="form-top">
                     <label>
                         Title:
@@ -95,7 +95,7 @@ function JhaForm({ jhas, setJhas }) {
                     </label>
                 </div>
                 {formData.steps.map((step, index) => (
-                    <StepForm
+                    <AddStep
                         key={index}
                         step={step}
                         index={index}
@@ -112,4 +112,4 @@ function JhaForm({ jhas, setJhas }) {
     );
 }
 
-export default JhaForm;
+export default AddJha;

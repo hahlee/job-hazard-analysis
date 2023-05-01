@@ -1,8 +1,8 @@
 import React from "react";
 
-function StepForm({ step, index, handleStepInputChange, handleDeleteStep }) {
+function AddStep({ step, index, handleStepInputChange, handleDeleteStep }) {
     return (
-        <div className="step-form">
+        <div className="add-step-form">
             <label>
                 Tasks:
                 <textarea
@@ -30,11 +30,11 @@ function StepForm({ step, index, handleStepInputChange, handleDeleteStep }) {
                     onChange={(event) => handleStepInputChange(event, index)}
                 />
             </label>
-            <button type="button" onClick={() => handleDeleteStep(index)}>
+            <button className="delete" type="button" onClick={() => handleDeleteStep(index)}>
                 Delete Step
             </button>
         </div>
     );
 }
 
-export default StepForm;
+export default AddStep;

@@ -34,15 +34,21 @@ button.primary {
   border: 1px solid green;
 }
 
+button.delete {
+  background: red;
+  color: white;
+  border: 1px solid red;
+}
 
-.form-top, .step-form {
+
+.form-top, .add-step-form {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   margin: 1em 0;
 }
 
-.form-top input, .step-form textarea {
+.form-top input, .add-step-form textarea {
   margin: 0 1em;
 }
 
