@@ -1,7 +1,12 @@
-Steps:
-  clone repo
-  'npm start' to run development server
-  open http://localhost:3000/ to view app
+# Steps:
+
+  1. `git clone` repo to your local machine.
+
+  2. `cd` into the directory and `npm install`.
+
+  2. `npm start` to run development server.
+
+  3. open [http://localhost:3000](http://localhost:3000) to view app.
 
 
 # Getting Started with Create React App
